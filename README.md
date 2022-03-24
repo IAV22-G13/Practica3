@@ -77,8 +77,6 @@ y comience el ciclo de nuevo. Además la cantante tiene algunos comportamientos 
 como comprobar si reconoce la sala en la que se encuentra, comprobar si está encerrada en la celda, 
 y merodear cogiendo posiciones aleatorias en el mapa.
 
-El fantasma tiene un árbol de comportamientos, pero ninguno de sus comportamientos está todavía definido.
-
 El jugador tiene un control jugador que le permite moverse con el cualquiera de los dos botones del ratón.
 Además, al pulsar la tecla E o Q, realiza una animación de "uso", y al pulsar el espacio una de "ataque", la cual tiene 
 tiempo de espera hasta usarla de nuevo. Cada uno de ellos activa un objeto vacio distinto, los cuales se llaman:
@@ -103,3 +101,9 @@ consiste en moverse hasta la posición de la cantante, otra que consiste en llev
 y cerrar la puerta, otra para apagar el piano. Tiene un comportamiento que le impide entrar en el escenario si hay 
 público observando, e hilado con esto, puede tirar las lámparas para asustarles. Y por último, tiene un comportamiento 
 de movimiento aleatorio, y otros de movimiento a salas especificas, como  a las bambalinas, o al escenario.
+
+**COMPORTAMIENTOS A AÑADIR**
+
+Máquina de estados de la cantante:
+
+cantanteStateMachine.png
