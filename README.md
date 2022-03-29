@@ -106,5 +106,5 @@ de movimiento aleatorio, y otros de movimiento a salas especificas, como  a las 
 
 Máquina de estados de la cantante:
 
-https://raw.githubusercontent.com/osgarc05/Practica3/master/assets/CantanteStateMachine.png
-https://raw.githubusercontent.com/osgarc05/Practica3/master/assets/GhostBehaviourTree.png
+![Máquina de estados de la cantante](./P3/CantanteStateMachine.png)
+![Árbol de comportamiento del fantasma](./P3/GhostBehaviourTree.png)
