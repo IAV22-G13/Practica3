@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private float ultimaAccion = 0;
     private Animator anim;
     private Rigidbody rb;
+    private bool captured;
 
     void Start()
     {
@@ -76,6 +77,8 @@ public class Player : MonoBehaviour
             ultimaAccion = tiempoEsperaAccion;
             areaCaptura.SetActive(true);
             anim.SetBool("Usable", true);
+                //singer.transform.parent = transform;
+                //singer.GetComponent<Cantante>().capturada = true;
         }
         else if (ultimaAccion > 0)
         {
@@ -88,5 +91,21 @@ public class Player : MonoBehaviour
             anim.SetBool("Attack", false);
         }
         anim.SetFloat("Speed", GetComponent<NavMeshAgent>().velocity.magnitude);
+    }
+
+    public void captureSinger()
+    {
+        GameObject singer = GameObject.FindGameObjectWithTag("Blackboard").GetComponent<GameBlackboard>().singer;
+        if (!captured)
+        {
+            singer.transform.parent = transform;
+            singer.GetComponent<Cantante>().capturada = true;
+        }
+        else
+        {
+            singer.transform.parent = null;
+            singer.GetComponent<Cantante>().capturada = false;
+        }
+        captured = !captured;
     }
 }
