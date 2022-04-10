@@ -206,6 +206,3 @@ Captura de la cantante por parte del jugador:
             piano.tocarTecla
         }
         continuar tarea
-
-
-
