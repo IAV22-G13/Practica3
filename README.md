@@ -114,9 +114,7 @@ Arbol de comportamiento del fantasma:
 
 **IMPLEMENTACIÓN FINAL**
 
-Se han implementando la máquina de estados y el arbol de comportamiento con ligeras modificaciones:
-
-Además se han añadido diversos comportamientos neceserarios.
+Se han añadido diversos comportamientos neceserarios.
 
 Captura de la cantante por parte del jugador:
 
@@ -206,3 +204,15 @@ Captura de la cantante por parte del jugador:
             piano.tocarTecla
         }
         continuar tarea
+
+    + 
+
+    Además se han implementando la máquina de estados y el arbol de comportamiento con algunas modificaciones:
+
+    Máquina de estados de la cantante:
+
+    ![Máquina de estados de la cantante](./P3/CantanteStateMachineNew.png)
+
+    Arbol de comportamiento del fantasma:
+
+    ![Árbol de comportamiento del fantasma](./P3/GhostBehaviourTreeNew.png)
