@@ -7,8 +7,8 @@ public class Atack : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        GameObject singer = GameObject.FindGameObjectWithTag("Blackboard").GetComponent<GameBlackboard>().singer;
-        if (other.gameObject == singer)
+        GameObject ghost = GameObject.FindGameObjectWithTag("Blackboard").GetComponent<GameBlackboard>().ghost;
+        if (other.gameObject == ghost)
         {
             transform.parent.GetComponent<Player>().attackGhost();
         }

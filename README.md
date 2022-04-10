@@ -107,4 +107,105 @@ de movimiento aleatorio, y otros de movimiento a salas especificas, como  a las 
 Máquina de estados de la cantante:
 
 ![Máquina de estados de la cantante](./P3/CantanteStateMachine.png)
+
+Arbol de comportamiento del fantasma:
+
 ![Árbol de comportamiento del fantasma](./P3/GhostBehaviourTree.png)
+
+**IMPLEMENTACIÓN FINAL**
+
+Se han implementando la máquina de estados y el arbol de comportamiento con ligeras modificaciones:
+
+Además se han añadido diversos comportamientos neceserarios.
+
+Captura de la cantante por parte del jugador:
+
+- Se ha creado el script capture y modificado el player para que haga lo siguiente:
+    
+    OnTriggerEnter() //trigger de captura activado al pulsar la tecla q
+    {
+        if (otro objeto es la cantante)
+            capturarCantante();
+    }
+
+    en script Player:
+
+    capturarCantante(){  //hace hija del jugador y la captura, o si ya esta capturada, la suelta.
+        if (!cantante.capturada){
+            cantante.setParent() = jugador;
+            cantante.capturada = true,
+        }
+        else {
+            cantante.setParent() = null;
+            cantante.capturada = false,
+        }
+        
+    }
+
+- Se ha creado el script attack y modificado el player para que haga lo siguiente:
+    
+    OnTriggerEnter() //trigger de ataque activado al pulsar la tecla espacio
+    {
+        if (otro objeto es el fantasma)
+            attackGhost();
+    }
+
+    en script Player:
+
+    attackGhost(){  //hace hija del jugador y la captura, o si ya esta capturada, la suelta.
+        ghostHitted = true; //desde el arbol se comprueba si ha sido pegado.    
+    }
+
+- Se han modificado ligeramente los scripts control palanca y público:
+    
+    En control palanca ahora al tirar y subir las lamparas se especifica cual de las dos esta siendo modificada
+
+    En público, a través del editor se informa que lampara es la que se encuentra encima suya, y cuando cae esa lampara, y no la otra, se
+    va solo la mitad del público correspondiente.
+
+    Además el fantasma en el componente GhostPalancaAction, va primero a por la palanca más cercana, y después a por la más lejana, y hasta que ambas lamparas esten caidas no da la tarea por terminada.
+
+- Se han añadido algunos comportamientos al fantasma: 
+
+    + PianoHittedCondition comprube si el piano está roto
+
+    + GhostRepairAction que permite arreglar el piano, tiene el siguiente pseudoCódigo:
+
+        agent.SetDestination(piano) //se mueve hasta el piano
+            if (ha llegado hasta el piano)
+            {
+                roto = false
+                Tarea resuelta
+            }       
+            continuar tarea
+
+    + GhostIsHittedCondition comprueba si le han golpeado
+
+    + RecoverHit para recuperarse cuando le ha golpeado el vizconde
+
+    + GhostListenSingerCondition que comprueba si puede escuchar a la cantante
+
+    + GhostLetSingerAction libera a la cantante, el codigo es:
+
+        cantante.setParent = null;
+        cantante.capturada = false;
+        Tarea resuelta
+
+    + VisionSingerInBackStageCondition comprueba que la cantante este en las bambalinas.
+
+    + GhostComponingAction, hasta que el fantasma vuelva a escuchar a la cantante, se queda componiendo en el piano (toca una tecla cada poco tiempo), esta programado asi:
+
+        if(cantante.cantando)
+                Tarea resuelta;
+
+        agent.SetDestination(piano);
+        timer -= tiempo que ha pasado;
+        if (estas en el piano, y ha pasado un timepo, toca el piano)
+        {
+            timer = tiempoParaSiguiente;
+            piano.tocarTecla
+        }
+        continuar tarea
+
+
+

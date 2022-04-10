@@ -16,6 +16,7 @@ public class GameBlackboard : MonoBehaviour
     public GameObject musicRoom;
     public GameObject celda;
     public GameObject singer;
+    public GameObject ghost;
     public GameObject stage;
     public GameObject basement;
     public GameObject backStage;

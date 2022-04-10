@@ -22,4 +22,9 @@ public class ControlPiano : MonoBehaviour
         tocado = true;
         GetComponent<AudioSource>().Play();
     }
+
+    public void Componing()
+    {
+        GetComponent<AudioSource>().Play();
+    }
 }
