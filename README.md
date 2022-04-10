@@ -205,7 +205,9 @@ Captura de la cantante por parte del jugador:
         }
         continuar tarea
 
-    + 
+    + GhostAndSingerSameRoomCondition comprueba que el fantasma y la cantante esten en la misma habitacion al mismo tiempo.
+
+    + GhostInActuationCondition comprueba que la cantante este en el escenario o en las bambalinas (cuando las ve).
 
     Además se han implementando la máquina de estados y el arbol de comportamiento con algunas modificaciones:
 
