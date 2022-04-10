@@ -12,23 +12,36 @@ public class GhostPalancaAction : Action
 {
     NavMeshAgent agent;
     GameObject lever;
+    GameObject lever2;
     GameBlackboard blackboard;
     public override void OnAwake()
     {
         agent = GetComponent<NavMeshAgent>();
         blackboard = GameObject.FindGameObjectWithTag("Blackboard").GetComponent<GameBlackboard>();
+        lever = blackboard.nearestLever(this.gameObject).transform.GetChild(0).gameObject;
+        lever2 = blackboard.farestLever(this.gameObject).transform.GetChild(0).gameObject;
     }
 
     public override TaskStatus OnUpdate()
     {
-        lever = blackboard.nearestLever(this.gameObject);
         var navHit = new NavMeshHit();
         NavMesh.SamplePosition(transform.position, out navHit, 2, NavMesh.AllAreas);
-        agent.SetDestination(lever.transform.position);
+        if(agent.enabled)
+            agent.SetDestination(lever.transform.position);
         if (Vector3.SqrMagnitude(transform.position - lever.transform.position) < 1)
         {
-            agent.SetDestination(transform.position);
-            return TaskStatus.Success;
+            if (lever.GetComponent<ControlPalanca>().caido && lever2.GetComponent<ControlPalanca>().caido)
+            {
+                agent.SetDestination(transform.position);
+                return TaskStatus.Success;
+            }
+            else
+            {
+                GameObject x = lever;
+                lever = lever2;
+                lever2 = x;
+            }
+            return TaskStatus.Running;
         }
         else return TaskStatus.Running;
     }

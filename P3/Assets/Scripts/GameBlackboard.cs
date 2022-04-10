@@ -51,6 +51,10 @@ public class GameBlackboard : MonoBehaviour
     {
         return ((westLever.transform.position - go.transform.position).magnitude > (eastLever.transform.position - go.transform.position).magnitude) ? eastLever : westLever; 
     }
+    public GameObject farestLever(GameObject go) 
+    {
+        return ((westLever.transform.position - go.transform.position).magnitude < (eastLever.transform.position - go.transform.position).magnitude) ? eastLever : westLever; 
+    }
 
 
     // Permite al fantasma escoger un lugar aleatorio para buscar a la cantante
