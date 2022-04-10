@@ -77,8 +77,6 @@ public class Player : MonoBehaviour
             ultimaAccion = tiempoEsperaAccion;
             areaCaptura.SetActive(true);
             anim.SetBool("Usable", true);
-                //singer.transform.parent = transform;
-                //singer.GetComponent<Cantante>().capturada = true;
         }
         else if (ultimaAccion > 0)
         {
@@ -107,5 +105,10 @@ public class Player : MonoBehaviour
             singer.GetComponent<Cantante>().capturada = false;
         }
         captured = !captured;
+    }
+
+    public void attackGhost()
+    {
+        GameObject.FindGameObjectWithTag("Blackboard").GetComponent<GameBlackboard>().hited = true;
     }
 }
