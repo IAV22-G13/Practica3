@@ -11,6 +11,7 @@ public class ControlPalanca : MonoBehaviour
     public GameObject candelabro;
     public GameObject publico;
     public float step;
+    public bool derecho;
     float altura;
     bool caido = false;
 
@@ -23,7 +24,7 @@ public class ControlPalanca : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Cantante>() || other.gameObject.GetComponent<Player>()) return;
+        if (other.gameObject.GetComponent<Cantante>() || other.gameObject.GetComponent<Player>() || other.gameObject.GetComponent<Capture>()) return;
         caido = !caido;
         Interact();
     }
@@ -37,7 +38,7 @@ public class ControlPalanca : MonoBehaviour
             candelabro.GetComponent<Rigidbody>().useGravity = true;
             for (int i = 0; i < publico.transform.childCount; ++i)
             {
-                publico.transform.GetChild(i).GetComponent<Publico>().apagaLuz();
+                publico.transform.GetChild(i).GetComponent<Publico>().apagaLuz(derecho);
             }
         }
         else
@@ -45,7 +46,7 @@ public class ControlPalanca : MonoBehaviour
             candelabro.GetComponent<Rigidbody>().useGravity = false;
             for (int i = 0; i < publico.transform.childCount; ++i)
             {
-                publico.transform.GetChild(i).GetComponent<Publico>().enciendeLuz();
+                publico.transform.GetChild(i).GetComponent<Publico>().enciendeLuz(derecho);
             }
         }
     }

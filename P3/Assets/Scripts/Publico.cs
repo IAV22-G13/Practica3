@@ -11,6 +11,9 @@ public class Publico : MonoBehaviour
 {
     int lucesEncendidas = 2;
     bool sentado = true;
+    bool derecho = true;
+    bool izquierdo = true;
+    public bool soyDerecho;
 
     private void Start()
     {
@@ -31,18 +34,29 @@ public class Publico : MonoBehaviour
 
     public bool getLuces()
     {
-        return sentado;
+        if (soyDerecho)
+            return derecho;
+        else
+            return izquierdo;
     }
 
-    public void apagaLuz()
+    public void apagaLuz(bool der)
     {
+        if (der)
+            derecho = false;
+        else
+            izquierdo = false;
         lucesEncendidas--;
         sentado = lucesEncendidas == 2;
     }
     //se llama cuando el fantasma o el vizconde desactivan o activan las luces
-    public void enciendeLuz()
+    public void enciendeLuz(bool der)
     {
-         lucesEncendidas++;
+        if (der)
+            derecho = true;
+        else
+            izquierdo = true;
+        lucesEncendidas++;
         sentado = lucesEncendidas == 2;
     }
 
