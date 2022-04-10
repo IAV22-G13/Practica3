@@ -13,7 +13,7 @@ public class ControlPalanca : MonoBehaviour
     public float step;
     public bool derecho;
     float altura;
-    bool caido = false;
+    public bool caido = false;
 
     public ControlPalanca otroControl;
 
