@@ -15981,7 +15981,7 @@ MonoBehaviour:
   musicRoom: {fileID: 984640642}
   celda: {fileID: 626511421}
   singer: {fileID: 373871681117018864}
-  ghost: {fileID: 2536986899609911519}
+  ghost: {fileID: 0}
   stage: {fileID: 908012309}
   basement: {fileID: 1137905981}
   backStage: {fileID: 553852558}
@@ -16998,19 +16998,23 @@ MonoBehaviour:
         In Music R Condition","Instant":true}]},{"Type":"GhostReturnAction","NodeData":{"Offset":"(142.5,166.614151)"},"ID":16,"Name":"Ghost
         Return Action","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(554.9355,228.636368)"},"ID":17,"Name":"SiNoLaEscucha","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-106.427933,132.1432)"},"ID":18,"Name":"Inverter","Instant":true,"Children":[{"Type":"GhostListenSingerCondition","NodeData":{"Offset":"(-4.894043,107.99968)"},"ID":19,"Name":"Ghost
         Listen Singer Condition","Instant":true}]},{"Type":"GhostComponingAction","NodeData":{"Offset":"(125.105835,135.856934)"},"ID":20,"Name":"Ghost
-        Componing Action","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1156.18848,250.000015)"},"ID":21,"Name":"SiEscuchaCantante","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostListenSingerCondition","NodeData":{"Offset":"(-288.571869,150.714371)"},"ID":22,"Name":"Ghost
+        Componing Action","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1170.47424,221.4286)"},"ID":21,"Name":"SiEscuchaCantante","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostListenSingerCondition","NodeData":{"Offset":"(-288.571869,150.714371)"},"ID":22,"Name":"Ghost
         Listen Singer Condition","Instant":true},{"Type":"PreventStageMovement","NodeData":{"Offset":"(-93.38529,150.499542)"},"ID":23,"Name":"Prevent
         Stage Movement","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(114.264938,162.768311)"},"ID":24,"Name":"BuscarBambalinas","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostSearchBackAction","NodeData":{"Offset":"(-142.8584,137.857117)"},"ID":25,"Name":"Ghost
         Search Back Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.ReturnSuccess","NodeData":{"Offset":"(107.141418,137.857117)"},"ID":26,"Name":"Return
         Success","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-100,122.222229)"},"ID":27,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"VisionSingerInBackStageCondition","NodeData":{"Offset":"(-112.222229,116.666687)"},"ID":28,"Name":"Vision
         Singer In Back Stage Condition","Instant":true},{"Type":"GhostChaseAction","NodeData":{"Offset":"(92.48364,116.666687)"},"ID":29,"Name":"Ghost
-        Chase Action","Instant":true}]}]}]},{"Type":"GhostPalancaAction","NodeData":{"Offset":"(358.785339,156.276825)"},"ID":30,"Name":"Ghost
-        Palanca Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(669.0453,160)"},"ID":31,"Name":"CapturarYEncerrar","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostChaseAction","NodeData":{"Offset":"(-245.882324,145.29425)"},"ID":32,"Name":"Ghost
-        Chase Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.ReturnSuccess","NodeData":{"Offset":"(-88.23462,148.823486)"},"ID":33,"Name":"Return
-        Success","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(0,110)"},"ID":34,"Name":"AbrirPuerta","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-139.999969,134.705872)"},"ID":35,"Name":"Inverter","Instant":true,"Children":[{"Type":"DoorCondition","NodeData":{"Offset":"(3.05175781E-05,120)"},"ID":36,"Name":"Door
-        Condition","Instant":true}]},{"Type":"GhostCloseDoorAction","NodeData":{"Offset":"(30,130)"},"ID":37,"Name":"Ghost
-        Close Door Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(190,134.705872)"},"ID":38,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]}]},{"Type":"GhostImprisonAction","NodeData":{"Offset":"(131.765869,148.823486)"},"ID":39,"Name":"Ghost
-        Imprison Action","Instant":true},{"Type":"GhostCloseDoorAction","NodeData":{"Offset":"(341.7666,148.823486)"},"ID":40,"Name":"Ghost
+        Chase Action","Instant":true}]}]}]},{"Type":"GhostPalancaAction","NodeData":{"Offset":"(275.452026,156.276825)"},"ID":30,"Name":"Ghost
+        Palanca Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(662.858337,170)"},"ID":31,"Name":"SiNoEstaEnEscenario","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-125.713928,137.142761)"},"ID":32,"Name":"Inverter","Instant":true,"Children":[{"Type":"GhostInActuationCondition","NodeData":{"Offset":"(-100,120)"},"ID":33,"Name":"Ghost
+        In Actuation Condition","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-10.62501,150)"},"ID":34,"Name":"Inverter","Instant":true,"Children":[{"Type":"GhostAndSingerSameRoomCondition","NodeData":{"Offset":"(55.6249924,110)"},"ID":35,"Name":"Ghost
+        And Singer Same Room Condition","Instant":true}]},{"Type":"GhostSearchRandomAction","NodeData":{"Offset":"(165.949921,139.745728)"},"ID":36,"Name":"Ghost
+        Search Random Action","Instant":true}]},{"Type":"PreventStageMovement","NodeData":{"Offset":"(983.4893,160.000015)"},"ID":37,"Name":"Prevent
+        Stage Movement","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1335.62463,160)"},"ID":38,"Name":"CapturarYEncerrar","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostChaseAction","NodeData":{"Offset":"(-245.882324,145.29425)"},"ID":39,"Name":"Ghost
+        Chase Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.ReturnSuccess","NodeData":{"Offset":"(-88.23462,148.823486)"},"ID":40,"Name":"Return
+        Success","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(0,110)"},"ID":41,"Name":"AbrirPuerta","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-139.999969,134.705872)"},"ID":42,"Name":"Inverter","Instant":true,"Children":[{"Type":"DoorCondition","NodeData":{"Offset":"(3.05175781E-05,120)"},"ID":43,"Name":"Door
+        Condition","Instant":true}]},{"Type":"GhostCloseDoorAction","NodeData":{"Offset":"(30,130)"},"ID":44,"Name":"Ghost
+        Close Door Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(190,134.705872)"},"ID":45,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]}]},{"Type":"GhostImprisonAction","NodeData":{"Offset":"(131.765869,148.823486)"},"ID":46,"Name":"Ghost
+        Imprison Action","Instant":true},{"Type":"GhostCloseDoorAction","NodeData":{"Offset":"(341.7666,148.823486)"},"ID":47,"Name":"Ghost
         Close Door Action","Instant":true}]}]}]}}'
       fieldSerializationData:
         typeName: []
