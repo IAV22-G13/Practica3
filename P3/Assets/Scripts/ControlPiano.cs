@@ -13,7 +13,7 @@ public class ControlPiano : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Cantante>() || other.gameObject.GetComponent<Player>()) return;
+        if (other.gameObject.GetComponent<Cantante>() || other.gameObject.GetComponent<Player>() || other.gameObject.GetComponent<Accion>() || other.gameObject.GetComponent<Atack>() || other.gameObject.GetComponent<Capture>()) return;
         tocado = false; // Solo lo hace el fantasma
     }
 
