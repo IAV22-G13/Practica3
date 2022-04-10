@@ -26,8 +26,7 @@ public class GhostSearchBackAction : Action
         if(agent.enabled)
             agent.SetDestination(backStage.transform.position);
         if ((navHit.mask & 1 << NavMesh.GetAreaFromName("Bambalinas")) != 0)
-        {
-            
+        {        
             agent.SetDestination(transform.position);
             return TaskStatus.Success;
         }
