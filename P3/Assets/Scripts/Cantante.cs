@@ -166,7 +166,6 @@ public class Cantante : MonoBehaviour
     // Genera un nuevo punto de merodeo cada vez que agota su tiempo de merodeo actual
     public void IntentaMerodear()
     {
-
         if ((transform.position - agente.destination).magnitude <= 0.1 + agente.stoppingDistance)
         {
             tiempoComienzoMerodeo -= Time.deltaTime;          

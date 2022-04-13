@@ -6701,6 +6701,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 709875813}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &717019170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717019172}
+  - component: {fileID: 717019171}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &717019171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717019170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece7576720629304cb4c1eff4558438e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &717019172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717019170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.42698, y: -5.3049946, z: 56.943924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724178779
 GameObject:
   m_ObjectHideFlags: 0
@@ -11551,7 +11594,7 @@ PrefabInstance:
     - target: {fileID: 9059665068123820418, guid: e05b9d2d997f9494aaef0af9fd045c55,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.499
+      value: 11.72
       objectReference: {fileID: 0}
     - target: {fileID: 9059665068123820418, guid: e05b9d2d997f9494aaef0af9fd045c55,
         type: 3}
@@ -15981,7 +16024,7 @@ MonoBehaviour:
   musicRoom: {fileID: 984640642}
   celda: {fileID: 626511421}
   singer: {fileID: 373871681117018864}
-  ghost: {fileID: 0}
+  ghost: {fileID: 2536986899609911519}
   stage: {fileID: 908012309}
   basement: {fileID: 1137905981}
   backStage: {fileID: 553852558}
@@ -16998,15 +17041,15 @@ MonoBehaviour:
         In Music R Condition","Instant":true}]},{"Type":"GhostReturnAction","NodeData":{"Offset":"(142.5,166.614151)"},"ID":16,"Name":"Ghost
         Return Action","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(554.9355,228.636368)"},"ID":17,"Name":"SiNoLaEscucha","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-106.427933,132.1432)"},"ID":18,"Name":"Inverter","Instant":true,"Children":[{"Type":"GhostListenSingerCondition","NodeData":{"Offset":"(-4.894043,107.99968)"},"ID":19,"Name":"Ghost
         Listen Singer Condition","Instant":true}]},{"Type":"GhostComponingAction","NodeData":{"Offset":"(125.105835,135.856934)"},"ID":20,"Name":"Ghost
-        Componing Action","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1170.47424,221.4286)"},"ID":21,"Name":"SiEscuchaCantante","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostListenSingerCondition","NodeData":{"Offset":"(-288.571869,150.714371)"},"ID":22,"Name":"Ghost
-        Listen Singer Condition","Instant":true},{"Type":"PreventStageMovement","NodeData":{"Offset":"(-93.38529,150.499542)"},"ID":23,"Name":"Prevent
-        Stage Movement","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(114.264938,162.768311)"},"ID":24,"Name":"BuscarBambalinas","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostSearchBackAction","NodeData":{"Offset":"(-142.8584,137.857117)"},"ID":25,"Name":"Ghost
-        Search Back Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.ReturnSuccess","NodeData":{"Offset":"(107.141418,137.857117)"},"ID":26,"Name":"Return
-        Success","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-100,122.222229)"},"ID":27,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"VisionSingerInBackStageCondition","NodeData":{"Offset":"(-112.222229,116.666687)"},"ID":28,"Name":"Vision
-        Singer In Back Stage Condition","Instant":true},{"Type":"GhostChaseAction","NodeData":{"Offset":"(92.48364,116.666687)"},"ID":29,"Name":"Ghost
-        Chase Action","Instant":true}]}]}]},{"Type":"GhostPalancaAction","NodeData":{"Offset":"(372.2262,156.276825)"},"ID":30,"Name":"Ghost
-        Palanca Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(662.858337,170)"},"ID":31,"Name":"SiNoEstaEnEscenario","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-125.713928,137.142761)"},"ID":32,"Name":"Inverter","Instant":true,"Children":[{"Type":"GhostInActuationCondition","NodeData":{"Offset":"(-100,120)"},"ID":33,"Name":"Ghost
-        In Actuation Condition","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-10.62501,150)"},"ID":34,"Name":"Inverter","Instant":true,"Children":[{"Type":"GhostAndSingerSameRoomCondition","NodeData":{"Offset":"(55.6249924,110)"},"ID":35,"Name":"Ghost
+        Componing Action","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1170.47424,221.4286)"},"ID":21,"Name":"SiEscuchaCantante","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostListenSingerCondition","NodeData":{"Offset":"(-288.571869,163.214371)"},"ID":22,"Name":"Ghost
+        Listen Singer Condition","Instant":true},{"Type":"PreventStageMovement","NodeData":{"Offset":"(-93.38529,162.999542)"},"ID":23,"Name":"Prevent
+        Stage Movement","Instant":true},{"Type":"GhostPalancaAction","NodeData":{"Offset":"(114.650513,156.276825)"},"ID":24,"Name":"Ghost
+        Palanca Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(296.083038,162.768311)"},"ID":25,"Name":"BuscarBambalinas","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostSearchBackAction","NodeData":{"Offset":"(-142.8584,137.857117)"},"ID":26,"Name":"Ghost
+        Search Back Action","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.ReturnSuccess","NodeData":{"Offset":"(107.141418,137.857117)"},"ID":27,"Name":"Return
+        Success","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-100,122.222229)"},"ID":28,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"VisionSingerInBackStageCondition","NodeData":{"Offset":"(-112.222229,116.666687)"},"ID":29,"Name":"Vision
+        Singer In Back Stage Condition","Instant":true},{"Type":"GhostChaseAction","NodeData":{"Offset":"(92.48364,116.666687)"},"ID":30,"Name":"Ghost
+        Chase Action","Instant":true}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(708.3128,170)"},"ID":31,"Name":"SiNoEstaEnEscenario","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-125.713928,137.142761)"},"ID":32,"Name":"Inverter","Instant":true,"Children":[{"Type":"GhostInActuationCondition","NodeData":{"Offset":"(-100,120)"},"ID":33,"Name":"Ghost
+        In Actuation Condition","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-10,150)"},"ID":34,"Name":"Inverter","Instant":true,"Children":[{"Type":"GhostAndSingerSameRoomCondition","NodeData":{"Offset":"(55.6249924,110)"},"ID":35,"Name":"Ghost
         And Singer Same Room Condition","Instant":true}]},{"Type":"GhostSearchRandomAction","NodeData":{"Offset":"(165.949921,139.745728)"},"ID":36,"Name":"Ghost
         Search Random Action","Instant":true}]},{"Type":"PreventStageMovement","NodeData":{"Offset":"(983.4893,160.000015)"},"ID":37,"Name":"Prevent
         Stage Movement","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1335.62463,160)"},"ID":38,"Name":"CapturarYEncerrar","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GhostChaseAction","NodeData":{"Offset":"(-245.882324,145.29425)"},"ID":39,"Name":"Ghost
