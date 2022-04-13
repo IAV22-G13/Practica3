@@ -218,3 +218,8 @@ Captura de la cantante por parte del jugador:
     Arbol de comportamiento del fantasma:
 
     ![Árbol de comportamiento del fantasma](./P3/GhostBehaviourTreeNew.png)
+
+    Reset de la escena: 'r'
+
+    Video YouTube: https://youtu.be/k6cyt9LfHuw
+    
